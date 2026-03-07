@@ -1,0 +1,610 @@
+/* CSS variables for consistent theming */
+:root {
+    --primary: #4A90E2;
+    /* Friendly blue */
+    --primary-dark: #2C3E50;
+    /* Deep blue/grey for severe tech */
+    --accent: #F5A623;
+    /* Energetic orange accent */
+    --accent-gold: #D4AF37;
+    /* For Kyoto Declaration */
+
+    --bg-light: #F8F9FA;
+    --bg-dark: #121820;
+    --bg-black: #080C10;
+
+    --text-main: #333333;
+    --text-muted: #666666;
+    --text-white: #FFFFFF;
+
+    --font-heading: 'Noto Sans JP', sans-serif;
+    --font-body: 'Noto Sans JP', sans-serif;
+    --font-mincho: 'Shippori Mincho', serif;
+
+    --radius: 12px;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    font-weight: 400;
+    color: var(--text-main);
+    line-height: 1.8;
+    background-color: var(--text-white);
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-heading);
+    line-height: 1.4;
+}
+
+.mincho {
+    font-family: var(--font-mincho) !important;
+}
+
+/* Typography Utilities */
+.fw-bold {
+    font-weight: 700;
+}
+
+.fw-black {
+    font-weight: 900;
+}
+
+.fs-xs {
+    font-size: 0.8rem;
+}
+
+.fs-small {
+    font-size: 0.9rem;
+}
+
+.fs-large {
+    font-size: 1.25rem;
+}
+
+.fs-xl {
+    font-size: 2rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.text-accent {
+    color: var(--accent);
+}
+
+.text-gold {
+    color: var(--accent-gold);
+}
+
+.text-white {
+    color: var(--text-white);
+}
+
+.text-muted {
+    color: var(--text-muted);
+}
+
+.mt-s {
+    margin-top: 1rem;
+}
+
+.mt-m {
+    margin-top: 2rem;
+}
+
+.mt-l {
+    margin-top: 4rem;
+}
+
+.mb-s {
+    margin-bottom: 1rem;
+}
+
+.mb-m {
+    margin-bottom: 2rem;
+}
+
+.mb-l {
+    margin-bottom: 4rem;
+}
+
+/* Layout Utilities */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.container.narrow {
+    max-width: 800px;
+}
+
+.section {
+    padding: 8rem 0;
+    position: relative;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary);
+    border-radius: 2px;
+}
+
+.section-title.text-white::after,
+.section-title.text-gold::after {
+    background-color: currentColor;
+}
+
+.bg-light {
+    background-color: var(--bg-light);
+}
+
+.bg-white {
+    background-color: var(--text-white);
+}
+
+.bg-dark {
+    background-color: var(--primary-dark);
+}
+
+.bg-black {
+    background-color: var(--bg-black);
+}
+
+.bg-primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.z-index-1 {
+    z-index: 1;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-size: 1.1rem;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #357ABD;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+}
+
+.btn-accent {
+    background-color: var(--accent);
+    color: white;
+    box-shadow: 0 4px 15px rgba(245, 166, 35, 0.3);
+}
+
+.btn-accent:hover {
+    background-color: #D68F1C;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(245, 166, 35, 0.4);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn-large {
+    padding: 20px 48px;
+    font-size: 1.3rem;
+}
+
+/* Pulse Animation for CTA */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 4px 15px rgba(245, 166, 35, 0.3);
+    }
+
+    50% {
+        transform: scale(1.03);
+        box-shadow: 0 10px 30px rgba(245, 166, 35, 0.5);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 4px 15px rgba(245, 166, 35, 0.3);
+    }
+}
+
+.pulse {
+    animation: pulse 3s infinite;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.nav-logo {
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: var(--primary-dark);
+}
+
+.nav-cta {
+    background-color: var(--accent);
+    color: white;
+    padding: 8px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.nav-cta:hover {
+    background-color: #D68F1C;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+    /* Offset nav */
+    background: url('hero_bg.png') center/cover no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+/* We can add pseudo-elements to create soft background patterns if no image exists yet */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 50%;
+    height: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, transparent 70%);
+    z-index: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.4) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    color: var(--primary-dark);
+    margin-bottom: 2rem;
+    line-height: 1.3;
+}
+
+.hero-title .highlight {
+    font-size: 4rem;
+    color: var(--primary);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.hero-text {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: var(--text-muted);
+}
+
+.hero-info {
+    background: white;
+    padding: 24px 40px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.hero-info .event-name {
+    font-weight: 900;
+    font-size: 1.7rem;
+    color: var(--primary-dark);
+}
+
+.hero-info .event-org {
+    font-weight: bold;
+    color: var(--text-muted);
+}
+
+/* Kyoto Declaration */
+.kyoto {
+    background-image: linear-gradient(rgba(18, 24, 32, 0.95), rgba(18, 24, 32, 0.95)), url('data:image/svg+xml;utf8,<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="2" fill="%23ffffff" fill-opacity="0.05"/></svg>');
+}
+
+.kyoto-text p {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    color: #e0e0e0;
+    letter-spacing: 0.1em;
+}
+
+/* Cards (Special Content) */
+.cards .card {
+    background: white;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.cards .card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.card-img {
+    height: 200px;
+    background-color: #E2E8F0;
+    position: relative;
+    /* Soft gradients to act as placeholders */
+}
+
+.bg-seminar {
+    background: linear-gradient(45deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+.bg-sst {
+    background: linear-gradient(45deg, #ffecd2 0%, #fcb69f 100%);
+}
+
+.bg-fashion {
+    background: linear-gradient(45deg, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
+}
+
+.bg-expo {
+    background: linear-gradient(45deg, #cfd9df 0%, #e2ebf0 100%);
+}
+
+.card-content {
+    padding: 30px;
+    flex: 1;
+}
+
+.card-content h3 {
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+/* Features List */
+.features {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.features li {
+    background: var(--bg-light);
+    padding: 6px 16px;
+    border-radius: 50px;
+    color: var(--primary-dark);
+    font-weight: bold;
+}
+
+.features-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 15px 30px;
+    background: var(--bg-light);
+    color: var(--primary-dark);
+    border-radius: var(--radius);
+    border: 2px solid #E2E8F0;
+}
+
+/* Entry Boxes */
+.entry-box {
+    padding: 40px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box-primary {
+    background: var(--primary-dark);
+    color: white;
+}
+
+.box-primary .box-title {
+    color: white;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.box-white {
+    background: white;
+}
+
+.box-white .box-title {
+    color: var(--primary-dark);
+    border-bottom: 2px solid #E2E8F0;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+/* Closing */
+.closing {
+    background: linear-gradient(135deg, #4A90E2 0%, #205D9E 100%);
+}
+
+/* Info Table */
+.info-table {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius);
+    padding: 40px;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.info-table dl {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 25px;
+}
+
+.info-table dt {
+    width: 30%;
+    font-weight: bold;
+    color: #A0AEC0;
+}
+
+.info-table dd {
+    width: 70%;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-title .highlight {
+        font-size: 2.6rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .info-table dt,
+    .info-table dd {
+        width: 100%;
+        text-align: center;
+    }
+
+    .info-table dt {
+        margin-bottom: 5px;
+    }
+}
+
+/* Fade-in Animation Classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
