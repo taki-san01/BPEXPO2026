@@ -446,19 +446,19 @@ h4 {
 }
 
 .bg-seminar {
-    background: linear-gradient(45deg, #a1c4fd 0%, #c2e9fb 100%);
+    background: url('bg_seminar.png') center/cover no-repeat;
 }
 
 .bg-sst {
-    background: linear-gradient(45deg, #ffecd2 0%, #fcb69f 100%);
+    background: url('bg_sst.png') center/cover no-repeat;
 }
 
 .bg-fashion {
-    background: linear-gradient(45deg, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
+    background: url('bg_fashion.png') center/cover no-repeat;
 }
 
 .bg-expo {
-    background: linear-gradient(45deg, #cfd9df 0%, #e2ebf0 100%);
+    background: url('bg_expo.png') center/cover no-repeat;
 }
 
 .card-content {
