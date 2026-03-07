@@ -446,19 +446,19 @@ h4 {
 }
 
 .bg-seminar {
-    background: url('bg_seminar.png') center/cover no-repeat;
+    background: url('bg_expo1.png') center/cover no-repeat;
 }
 
 .bg-sst {
-    background: url('bg_sst.png') center/cover no-repeat;
+    background: url('bg_expo2.png') center/cover no-repeat;
 }
 
 .bg-fashion {
-    background: url('bg_fashion.png') center/cover no-repeat;
+    background: url('bg_expo3.png') center/cover no-repeat;
 }
 
 .bg-expo {
-    background: url('bg_expo.png') center/cover no-repeat;
+    background: url('bg_expo4.png') center/cover no-repeat;
 }
 
 .card-content {
