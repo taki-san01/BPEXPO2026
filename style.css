@@ -748,6 +748,26 @@ h4 {
     margin-bottom: 1.5rem;
 }
 
+.venue-map {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.venue-map-title {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.venue-map img {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    display: block;
+}
+
 .sns-grid {
     display: flex;
     justify-content: center;
