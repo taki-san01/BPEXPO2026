@@ -1008,6 +1008,26 @@ h4 {
     }
 }
 
+.doc-links {
+    margin-top: 2.5rem;
+}
+
+.doc-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.doc-btn:hover {
+    background: #fff;
+    color: var(--primary-color);
+}
+
 /* --- Animations (Reveal on Scroll) --- */
 .reveal {
     opacity: 0;
