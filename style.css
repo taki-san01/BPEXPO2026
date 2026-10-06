@@ -768,6 +768,71 @@ h4 {
     display: block;
 }
 
+.timetable-figure img {
+    max-width: 620px;
+}
+
+.kv-band img {
+    width: 100%;
+    display: block;
+}
+
+.access-steps {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 760px) {
+    .access-steps {
+        grid-template-columns: 1fr;
+    }
+}
+
+.access-steps li {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.5rem 1.2rem;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.access-step {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+.access-steps strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+}
+
+.access-steps span:not(.access-step) {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.access-note {
+    background: #fff;
+    border-left: 4px solid var(--accent-color);
+    border-radius: 0 12px 12px 0;
+    padding: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.9;
+}
+
 .schedule-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
